@@ -5,22 +5,14 @@
   # Directory to publish after build, usually your dist folder
   publish = "dist"
   
-  # Environment variables (if needed)
-  environment = { 
-    NODE_ENV = "production" 
-  }
+  # Environment variables
+  [build.environment]
+    NODE_ENV = "production"
 
 [context.production]
   # Settings for production deployment
   command = "npm run build"
-  
-  # Directory for production publish
   publish = "dist"
-  
-  # Plugins or post-processing (Optional)
-  # [plugins]
-  # [[plugins]]
-  # package = "@netlify/plugin-lighthouse"
 
 [[redirects]]
   from = "/"
