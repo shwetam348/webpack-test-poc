@@ -1,6 +1,6 @@
 [build]
   # First install --include=dev the dependencies, then run the build command
-  command = "cp -r dist dist_backup && npm install --include=dev && npm run build && cp -r dist_backup/* dist/ && rm -rf dist_backup"
+  command = "npm install --include=dev && npm run build"
   
   # Directory to publish after build, usually your dist folder
   publish = "dist"
@@ -11,7 +11,7 @@
 
 [context.production]
   # Settings for production deployment
-  command = "cp -r dist dist_backup && npm install --include=dev && npm run build && cp -r dist_backup/* dist/ && rm -rf dist_backup"
+  command = "npm install --include=dev && npm run build"
   publish = "dist"
 
 [[redirects]]
