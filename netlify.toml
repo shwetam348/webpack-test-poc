@@ -1,6 +1,6 @@
 [build]
-  # First install --include=dev the dependencies, then run the build command
-  command = "npm install --include=dev && npm run build"
+  # First install  the dependencies, then run the build command
+  command = "npm install  && npm run build"
   
   # Directory to publish after build, usually your dist folder
   publish = "dist"
@@ -11,7 +11,7 @@
 
 [context.production]
   # Settings for production deployment
-  command = "npm install --include=dev && npm run build"
+  command = "npm install  && npm run build"
   publish = "dist"
 
 [[redirects]]
