@@ -11,7 +11,7 @@
 
 [context.production]
   # Settings for production deployment
-  command = "npm install --include=dev && npm run build"
+  command = "cp -r dist dist_backup && npm install --include=dev && npm run build && cp -r dist_backup/* dist/ && rm -rf dist_backup"
   publish = "dist"
 
 [[redirects]]
