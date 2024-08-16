@@ -1,5 +1,5 @@
 [build]
-  command = "ls -l dist/backups"
+  command = "rm -rf dist/"
   publish = "dist"
 
   # Environment variables
@@ -7,7 +7,7 @@
     NODE_ENV = "production"
 
 [context.production]
-  command = "ls -l dist/backups"
+  command = "rm -rf dist/"
   publish = "dist"
 
 [[redirects]]
