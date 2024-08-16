@@ -1,6 +1,6 @@
 [build]
   # First install --only=dev the dependencies, then run the build command
-  command = "npm install && npm run build"
+  command = "npm install --only=dev && npm run build"
   
   # Directory to publish after build, usually your dist folder
   publish = "dist"
