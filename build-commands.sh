@@ -10,9 +10,6 @@ mkdir -p "$BACKUP_DIR"
 echo "-------------------------Listing contents of dist before backup:-------------------------"
 ls -al dist
 
-# Generate a timestamp
-TIMESTAMP=$(date +'%Y%m%d_%H%M%S')
-echo "-------------------------Timestamp: $TIMESTAMP-------------------------"
 
 # Determine the next version number for the backup
 # Find the latest version number and increment it
