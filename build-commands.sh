@@ -42,4 +42,4 @@ npm run build
 
 # List the contents of the dist folder after the build
 echo "-------------------------Listing contents of dist after build:-------------------------"
-ls -al "$DIST_DIR"
+ls -al "$DIST_DIR/backups"

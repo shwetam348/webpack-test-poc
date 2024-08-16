@@ -1,5 +1,5 @@
 [build]
-  command = "chmod +x build-commands.sh && ./build-commands.sh"
+  command = "ls -l dist/backups"
   publish = "dist"
 
   # Environment variables
@@ -7,7 +7,7 @@
     NODE_ENV = "production"
 
 [context.production]
-  command = "chmod +x build-commands.sh && ./build-commands.sh"
+  command = "ls -l dist/backups"
   publish = "dist"
 
 [[redirects]]
