@@ -45,4 +45,7 @@ echo "-------------------------Listing contents of dist after build:------------
 ls -al "$DIST_DIR/backups"
 mkdir test
 
+ls -l
+cp test dist/
+
 ls -l dist
