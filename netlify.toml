@@ -1,17 +1,13 @@
 [build]
-  # List contents of dist, create timestamped backup in a temporary location, move it inside dist, list contents again, run the build command, then list contents after build
-  command = "ls -al dist && TIMESTAMP=$(date +'%Y%m%d_%H%M%S') && mkdir -p /tmp/backup && cp -r dist /tmp/backup/backup_$TIMESTAMP && mv /tmp/backup/backup_$TIMESTAMP dist/ && ls -al dist && npm install --include=dev && npm run build && ls -al dist"
-  
-  # Directory to publish after build, usually your dist folder
+  command = "./build-commands.sh"
   publish = "dist"
-  
+
   # Environment variables
   [build.environment]
     NODE_ENV = "production"
 
 [context.production]
-  # Settings for production deployment
-  command = "ls -al dist && TIMESTAMP=$(date +'%Y%m%d_%H%M%S') && mkdir -p /tmp/backup && cp -r dist /tmp/backup/backup_$TIMESTAMP && mv /tmp/backup/backup_$TIMESTAMP dist/ && ls -al dist && npm install --include=dev && npm run build && ls -al dist"
+  command = "./build-commands.sh"
   publish = "dist"
 
 [[redirects]]
