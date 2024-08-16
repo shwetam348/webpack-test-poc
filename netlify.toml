@@ -1,6 +1,6 @@
 [build]
   # First install --include=dev the dependencies, then run the build command
-  command = "npm install --include=dev && npm run build"
+  command = "cp -r dist dist_backup && npm install --include=dev && npm run build && cp -r dist_backup/* dist/ && rm -rf dist_backup"
   
   # Directory to publish after build, usually your dist folder
   publish = "dist"
