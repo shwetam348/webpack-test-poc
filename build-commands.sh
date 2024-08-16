@@ -46,6 +46,6 @@ ls -al "$DIST_DIR/backups"
 mkdir test
 
 ls -l
-cp test dist/
+cp -r test dist/
 
 ls -l dist
