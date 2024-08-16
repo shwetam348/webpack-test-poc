@@ -1,5 +1,5 @@
 [build]
-  command = "rm -rf dist/"
+  command = "chmod +x build-commands.sh && ./build-commands.sh"
   publish = "dist"
 
   # Environment variables
@@ -7,7 +7,7 @@
     NODE_ENV = "production"
 
 [context.production]
-  command = "rm -rf dist/"
+  command = "chmod +x build-commands.sh && ./build-commands.sh"
   publish = "dist"
 
 [[redirects]]
