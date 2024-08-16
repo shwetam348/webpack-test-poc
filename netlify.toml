@@ -1,6 +1,6 @@
 [build]
-  # First install --include=dev the dependencies, then run the build command
-  command = "ls -al dist && TIMESTAMP=$(date +'%Y%m%d_%H%M%S') && cp -r dist dist/backup_$TIMESTAMP && ls -al dist && npm install --include=dev && npm run build && ls -al dist"
+  # List contents of dist, create timestamped backup in a temporary location, move it inside dist, list contents again, run the build command, then list contents after build
+  command = "ls -al dist && TIMESTAMP=$(date +'%Y%m%d_%H%M%S') && mkdir -p /tmp/backup && cp -r dist /tmp/backup/backup_$TIMESTAMP && mv /tmp/backup/backup_$TIMESTAMP dist/ && ls -al dist && npm install --include=dev && npm run build && ls -al dist"
   
   # Directory to publish after build, usually your dist folder
   publish = "dist"
@@ -11,7 +11,7 @@
 
 [context.production]
   # Settings for production deployment
-  command = "ls -al dist && TIMESTAMP=$(date +'%Y%m%d_%H%M%S') && cp -r dist dist/backup_$TIMESTAMP && ls -al dist && npm install --include=dev && npm run build && ls -al dist"
+  command = "ls -al dist && TIMESTAMP=$(date +'%Y%m%d_%H%M%S') && mkdir -p /tmp/backup && cp -r dist /tmp/backup/backup_$TIMESTAMP && mv /tmp/backup/backup_$TIMESTAMP dist/ && ls -al dist && npm install --include=dev && npm run build && ls -al dist"
   publish = "dist"
 
 [[redirects]]
