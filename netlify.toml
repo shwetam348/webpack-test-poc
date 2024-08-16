@@ -1,6 +1,6 @@
 [build]
-  # Command to build your project using Webpack
-  command = "npm run build"
+  # First install the dependencies, then run the build command
+  command = "npm install && npm run build"
   
   # Directory to publish after build, usually your dist folder
   publish = "dist"
@@ -11,7 +11,7 @@
 
 [context.production]
   # Settings for production deployment
-  command = "npm run build"
+  command = "npm install && npm run build"
   publish = "dist"
 
 [[redirects]]

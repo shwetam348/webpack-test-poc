@@ -19,5 +19,5 @@ module.exports = {
       },
     ],
   },
-  mode: 'development', // Development mode
+  mode: 'production', // Development mode
 };
