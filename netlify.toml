@@ -11,7 +11,7 @@
 
 [context.production]
   # Settings for production deployment
-  command = "npm install && npm run build"
+  command = "npm install --only=dev && npm run build"
   publish = "dist"
 
 [[redirects]]
