@@ -1,9 +1,9 @@
 [build]
   # First install --include=dev the dependencies, then run the build command
-  command = "npm install --include=dev && npm run build"
+  command = "ls -al && npm install --include=dev && npm run build && ls -al"
   
   # Directory to publish after build, usually your dist folder
-  publish = "dist/v1.1"  # Update this path for each new version
+  publish = "dist"
   
   # Environment variables
   [build.environment]
@@ -11,8 +11,8 @@
 
 [context.production]
   # Settings for production deployment
-  command = "npm install --include=dev && npm run build"
-  publish = "dist/v1.1"  # Update this path for each new version
+  command = "ls -al && npm install --include=dev && npm run build && ls -al"
+  publish = "dist"
 
 [[redirects]]
   from = "/"
