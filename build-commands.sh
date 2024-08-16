@@ -9,7 +9,7 @@ mkdir -p "$BACKUP_DIR"
 
 # List the contents of the dist folder before backup
 echo "-------------------------Listing contents of dist before backup:-------------------------"
-ls -al "$DIST_DIR"
+ls -al "$BACKUP_DIR"
 
 # Determine the next version number for the backup
 # Find the latest version number in the backups directory and increment it
