@@ -2,6 +2,10 @@
   command = "chmod +x build-commands.sh && ./build-commands.sh"
   publish = "dist"
 
+
+  [build.lifecycle]
+    postbuild = "ls -al && ls -al dist"
+
   # Environment variables
   [build.environment]
     NODE_ENV = "production"
@@ -9,6 +13,10 @@
 [context.production]
   command = "chmod +x build-commands.sh && ./build-commands.sh"
   publish = "dist"
+
+  # Post-build script specifically for production
+  [context.production.build.lifecycle]
+    postbuild = "ls -al && ls -al dist"
 
 [[redirects]]
   from = "/"
