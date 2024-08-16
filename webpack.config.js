@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/index.js', // Entry point
   output: {
     filename: '[name].[contenthash].js', // this will generate unique file names
-    path: path.resolve(__dirname, 'dist'), // Output directory,
+    path: path.resolve(__dirname, 'dist/v1.1'), // Output directory,
     clean: false, // Ensure clean is false so older files aren't deleted
 
   },
@@ -19,5 +19,6 @@ module.exports = {
       },
     ],
   },
+
   mode: 'production', // Development mode
 };

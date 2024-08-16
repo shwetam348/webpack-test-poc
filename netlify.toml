@@ -3,7 +3,7 @@
   command = "npm install --include=dev && npm run build"
   
   # Directory to publish after build, usually your dist folder
-  publish = "dist"
+  publish = "dist/v1.1"  # Update this path for each new version
   
   # Environment variables
   [build.environment]
@@ -12,7 +12,7 @@
 [context.production]
   # Settings for production deployment
   command = "npm install --include=dev && npm run build"
-  publish = "dist"
+  publish = "dist/v1.1"  # Update this path for each new version
 
 [[redirects]]
   from = "/"
